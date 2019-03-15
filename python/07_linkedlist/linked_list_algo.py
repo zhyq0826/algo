@@ -67,7 +67,7 @@ def remove_nth_from_end(head: Node, n: int) -> Optional[Node]:
         count += 1
     if not fast and count < n:  # not that many nodes
         return head
-    if not fast and count == n:
+    if not fast and count == n:  # 恰巧到链表末尾，倒数第 n 个就会第一个
         return head._next
     
     slow = head

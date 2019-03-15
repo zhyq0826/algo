@@ -70,6 +70,7 @@ class SinglyLinkedList:
         new_node._next = node
         current._next = new_node
 
+    # 区分节点是不是头节点
     def delete_by_node(self, node: Node):
         if not self._head or not node:
             return
@@ -85,6 +86,7 @@ class SinglyLinkedList:
             return
         current._next = node._next
 
+    # 删除所有满足条件的 value，用 fake 节点保持头部节点指针
     def delete_by_value(self, value: int):
         if not self._head or not value:
             return
